@@ -266,7 +266,7 @@ async function showModal(hero) {
         // Obtener y mostrar las partidas recientes
         const matches = await fetchHeroMatches(hero.id);
         const recentMatchesHtml = `
-            <h3>Partidas Pro</h3>
+            <h3>Algunas Partidas</h3>
             <div class="table-container">
                 <table class="match-stats-table">
                     <thead>
@@ -401,7 +401,7 @@ async function generatePlayersHtml(playersData) {
     );
 
     return `
-        <h3>Jugadores Pro</h3>
+        <h3>Algunos Jugadores</h3>
         <div class="players-container">
             <div class="players-grid">
                 ${playersWithDetails.map(player => `
