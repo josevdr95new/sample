@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Hero Stats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search-input" id="searchHero" placeholder="Buscar héroe...">
+        <div class="filters-container">
+            <select class="filter-select" id="attributeFilter">
+                <option value>Atributo principal</option>
+                <option value="str">Fuerza</option>
+                <option value="agi">Agilidad</option>
+                <option value="int">Inteligencia</option>
+                <option value="all">Universal</option>
+            </select>
+            <select class="filter-select" id="roleFilter">
+                <option value>Rol</option>
+                <option value="Carry">Portador</option>
+                <option value="Support">Apoyo</option>
+                <option value="Nuker">Nukero</option>
+                <option value="Disabler">Incapacitador</option>
+                <option value="Jungler">Jungla</option>
+                <option value="Durable">Durable</option>
+                <option value="Escape">Escape</option>
+                <option value="Pusher">Empujador</option>
+                <option value="Initiator">Iniciador</option>
+            </select>
+        </div>
+        <div class="hero-count" id="heroCount"></div>
+    </div>
+
+    <div id="heroes" class="hero-grid">
+        <div class="loading">Cargando héroes...</div>
+    </div>
+
+    <!-- Modal para detalles del héroe -->
+    <div id="heroModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(this)">&#xd7;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+	
+	
+
+    <!-- Botones flotantes de compartir y contacto -->
+    <div class="floating-sharing-buttons">
+        <button id="share-button" class="floating-sharing-button">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <button id="send-email-button" class="floating-sharing-button">
+            <i class="fas fa-envelope"></i>
+        </button>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <span>Total Héroes: <span id="totalHeroes">0</span></span>
+            <span id="lastUpdate">Última actualización: <span id="lastUpdateDate">Cargando...</span></span>
+        </div>
+        <span>Dota 2 Hero Stats - josevdr95 v1.1 2025</span>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="sharing-scripts.js" defer></script>
+</body>
+</html>
